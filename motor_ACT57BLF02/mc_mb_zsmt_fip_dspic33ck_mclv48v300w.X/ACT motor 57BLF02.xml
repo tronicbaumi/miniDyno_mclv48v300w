@@ -1,0 +1,47 @@
+<!--WE DO NOT RECOMMEND MANUAL EDITING OF THIS FILE. THIS IS A GENERATED FILE. EDITING THIS FILE MAY CAUSE ITS IMPORT INTO motorBench® Development Suite TO FAIL WITHOUT ANY WARNING OR NOTIFICATION.-->
+<pmsm>
+<pmsmMotorState>
+   <handle>New Hurst300</handle>
+   <nickname>act Motor</nickname>
+   <mfrCompanyName>act </mfrCompanyName>
+   <mfrMotorName>57BLF02</mfrMotorName>
+   <mfrPartNumber>000</mfrPartNumber>
+   <mfrAdditionalInfo/>
+   <mchpDirectPartNumber>000</mchpDirectPartNumber>
+   <nameplate>
+      <namePlateRatedCurrentContinuous>7.0 A</namePlateRatedCurrentContinuous>
+      <namePlateRatedPeakCurrent>21.0 A</namePlateRatedPeakCurrent>
+      <namePlateRatedVoltage>24 V</namePlateRatedVoltage>
+      <namePlateBaseSpeed>314.159265358979310000 rad/s</namePlateBaseSpeed>
+      <namePlateRatedSpeed>471.238898038468965000 rad/s</namePlateRatedSpeed>
+   </nameplate>
+   <other>
+      <fullscaleBaseRatio>1.5 one</fullscaleBaseRatio>
+      <polePairs>4.0 one</polePairs>
+   </other>
+   <version>2.15</version>
+</pmsmMotorState>
+<motorParameters>
+   <Rs>
+      <active>0.2403143393995924 Ω_line_to_neutral</active>
+   </Rs>
+   <Ld>
+      <active>1.322372542776334E-4 H_line_to_neutral</active>
+   </Ld>
+   <Lq>
+      <active>1.5477269802717996E-4 H_line_to_neutral</active>
+   </Lq>
+   <Ke>
+      <active>13.521639347076416 Vppll_per_kRPM</active>
+   </Ke>
+   <B>
+      <active>3.9961462066960336E-5 one</active>
+   </B>
+   <Tf>
+      <active>0.0143238350133147 one</active>
+   </Tf>
+   <J>
+      <active>2.842855142191637E-5 one</active>
+   </J>
+</motorParameters>
+</pmsm>

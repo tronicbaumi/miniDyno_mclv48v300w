@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/production/anamolyDetection_dsPIC33CK_act57blf_48v300w.X.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>24576</length>
+      <used>7502</used>
+      <free>17074</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>269184</length>
+      <used>48852</used>
+      <free>220332</free>
+    </memory>
+  </executable>
+</project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production/predictiveMaintenance_samE54_act57blf_48V300W.X.production.elf">
+    <memory name="program">
+      <units>bytes</units>
+      <length>1048576</length>
+      <used>460850</used>
+      <free>587726</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>262144</length>
+      <used>9772</used>
+      <free>252372</free>
+    </memory>
+  </executable>
+</project>

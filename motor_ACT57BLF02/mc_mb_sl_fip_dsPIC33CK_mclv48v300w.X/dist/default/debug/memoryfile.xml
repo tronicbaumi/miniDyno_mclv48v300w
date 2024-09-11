@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/debug/motorbench_FOC_PLL_dsPIC33CK_48V300W.X.debug.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>24576</length>
+      <used>22050</used>
+      <free>2526</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>269184</length>
+      <used>38460</used>
+      <free>230724</free>
+    </memory>
+  </executable>
+</project>

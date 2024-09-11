@@ -1,0 +1,47 @@
+<!--WE DO NOT RECOMMEND MANUAL EDITING OF THIS FILE. THIS IS A GENERATED FILE. EDITING THIS FILE MAY CAUSE ITS IMPORT INTO motorBench® Development Suite TO FAIL WITHOUT ANY WARNING OR NOTIFICATION.-->
+<pmsm>
+<pmsmMotorState>
+   <handle>New Hurst300</handle>
+   <nickname>delongi_motor</nickname>
+   <mfrCompanyName>000</mfrCompanyName>
+   <mfrMotorName>motor</mfrMotorName>
+   <mfrPartNumber>000</mfrPartNumber>
+   <mfrAdditionalInfo/>
+   <mchpDirectPartNumber>000</mchpDirectPartNumber>
+   <nameplate>
+      <namePlateRatedCurrentContinuous>2.0 A</namePlateRatedCurrentContinuous>
+      <namePlateRatedPeakCurrent>2.5 A</namePlateRatedPeakCurrent>
+      <namePlateRatedVoltage>24 V</namePlateRatedVoltage>
+      <namePlateBaseSpeed>366.519142918809195000 rad/s</namePlateBaseSpeed>
+      <namePlateRatedSpeed>418.879020478639080000 rad/s</namePlateRatedSpeed>
+   </nameplate>
+   <other>
+      <fullscaleBaseRatio>1.5 one</fullscaleBaseRatio>
+      <polePairs>3.0 one</polePairs>
+   </other>
+   <version>2.15</version>
+</pmsmMotorState>
+<motorParameters>
+   <Rs>
+      <active>2.50 Ω_line_to_neutral</active>
+   </Rs>
+   <Ld>
+      <active>0.000032063637279796250 H_line_to_neutral</active>
+   </Ld>
+   <Lq>
+      <active>0.0000365700 H_line_to_neutral</active>
+   </Lq>
+   <Ke>
+      <active>8.46571969985962 Vppll_per_kRPM</active>
+   </Ke>
+   <B>
+      <active>0.00015056251093509496 one</active>
+   </B>
+   <Tf>
+      <active>0.0017173947433090388 one</active>
+   </Tf>
+   <J>
+      <active>2.1881187779387945E-7 one</active>
+   </J>
+</motorParameters>
+</pmsm>

@@ -1,0 +1,88 @@
+# Prepared for AN1160 dsPIC33CK256MP508_MCLV2.X demo
+# Set-up of the scope, sample, then write the result data to a file in csv format
+from threading import Timer
+import time
+import sys
+import os
+
+from org.netbeans.api.project.ui import OpenProjects;
+
+# ASCII console color codes
+RED = "\033[31m"
+GREEN = "\033[32m"
+DEFAULT = "\033[0m"
+
+print("###########################")
+print("Write scope data to a file")
+print("###########################")
+
+Start_Speed = 14500
+Step_Size = 500
+Step_Count = 5
+
+
+# Speed control variable to set speed of the motor
+Speedcontrol = x2c_symbol.getSymbol("motor.apiData.velocityReference")  # get reference speed
+
+# Button to start and stop motor 
+Start_button = x2c_symbol.getSymbol("systemData.board.sw1.buttonState")
+
+
+
+# Use netbeans APIs to get and set project environment
+prj = OpenProjects.getDefault().getMainProject()
+try:
+    prjDir = prj.getProjectDirectory().getPath()
+    print(prjDir)
+except TypeError as e:
+    print(e)
+    print(RED + "No project folder found. Right click on project -> Set as Main project")
+    sys.exit(1)  # terminate
+
+os.chdir(prjDir)  # change working dir to the project
+print(os.getcwd())
+
+Start_button.setValue(0) #Turn motor on
+
+# Opening File
+f = open('Data_script.csv', 'w')
+for x in range(0, Step_Count):
+
+    print(Start_Speed)
+    Speedcontrol.setValue(Start_Speed)
+    # x2c_scope.clearTrigger()
+    # x2c_scope.clearChannelConfigs()
+    # # set sample time to 50us
+    # x2c_scope.setSampleTime(0.00005)
+
+    # # getting variable data from X2C scope (int channel, String identifier, double gain, double offset)
+    x2c_scope.setChannelConfig(1, "motor.idq.q", 1, 0)
+    x2c_scope.setChannelConfig(2, "motor.apiData.velocityMeasured",1, 0)
+    #x2c_scope.setChannelConfig(3, "motor.apiData.velocityMeasured", 1, 0)
+    x2c_scope.sample(False)  # false-> non blocking
+    print("Wait for scope sample finish")
+    while not x2c_scope.isSampleComplete():
+        time.sleep(0.1)
+        x2c_scope.uploadData()
+        LNETFrame = x2c_scope.getData()
+    #
+    # # Writing Data into the file
+    for i in range(len(LNETFrame)):
+        print(LNETFrame[i])
+        print(type(LNETFrame[0]))
+    for i in range(len(LNETFrame[i])):  # For all channels
+        for n in range(len(LNETFrame)):  # For all data point in the selected channel
+            f.write(str(LNETFrame[n][i]) + ",")  # separate the data points
+        f.write("\n")  # new line for channels
+    #
+    Start_Speed = Start_Speed + Step_Size
+    time.sleep(2)  # Wait a bit
+
+Start_button.setValue(0) #Turn motor OFF
+Speedcontrol.setValue(-500)  # reset value of motor speed to 0
+
+# Closing the file
+#
+f.close()
+
+print("Processing DONE!!")
