@@ -1,0 +1,5 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=c:\\_prg\\dsPIC33A\\mclv-48v-300w-an1292-dspic33ak128mc106\\pmsm.X\\_build_mplab\\pmsm\\default\\image_default.elf"
+    ]
+}
